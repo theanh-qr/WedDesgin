@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Contenct-Type" contenct="text/html"; charset="UTF-8"/>
+<title>Untitled Document</title>
+<link rel="stylesheet" href="">
+</head>
+<body>
+	<input type="text" name="" id="txt-val" value=""/>
+	<div id="result"></div>
+	<script type="text/javascript">
+		var input = document.getElementById("txt-val");
+		input.addEventListener('keyup',function(){
+			document.getElementById('result').innerHTML = input.value;
+		});
+		// bo sung hanh dong nua
+		input.addEventListener('keyup',function(){
+			if (input.value.length > 10) {
+				alert("Ban da nhap nhieu hon 10 ky tu");
+			}
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Contenct-Type" contenct="text/html"; charset="UTF-8"/>
+<title>Nhập phép tính</title>
+<link rel="stylesheet" href="">
+<script type="text/javascript">
+	var form;
+	function tinh(form) {
+		form.results.value=eval(form.entry.value);
+	}
+</script>
+</head>
+
+<body>
+	<form method="POST">
+	<table>
+		<tr>
+			<td>Nhập phép tính</td>
+			<td><input type="text" name="entry"></td>
+		</tr>
+		<tr>
+			<td>Kết quả</td>
+			<td><input type="text" name="results" onfocus="this.blur();"></td>
+		</tr>
+		<tr>
+			<td><input type="button" value="Tính" onclick="tinh(this.form);"></td>
+		</tr>
+	</table>
+	</form>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Contenct-Type" contenct="text/html"; charset="UTF-8"/>
+<title>Untitled Document</title>
+<script type="text/javascript">
+	function add_user()
+	{
+		var name = document.getElementById('name').value;
+		var password = document.getElementById('password').value;
+		var password1 = document.getElementById('password1').value;
+		var email = document.getElementById('email');
+		var address = document.getElementById('address');
+		var re = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+		if(name=='' || password == '' || email =='' || address ==''){
+			alert("Bạn cần điền day du thong tin vào!");
+			return false;
+		}
+		else if(password != password1)
+		{
+			alert(" Mat khau khong giong nhau!");
+			return false;
+		}
+		else if(name.length<5)
+		{
+			alert("ten phai nhieu hon 5 ky tu");
+			return false;
+		}
+		else if(password.length<8)
+		{
+			alert("mat khau phai nhieu hon 8 ky tu");
+			return false;
+		}
+		else if(phone.length<10)
+		{
+			alert("so dien thoai phai nhieu hon 10 ky tu");
+			return false;
+		}
+		else
+		{
+			alert("hop le");
+			return true;
+		}
+    }
+
+
+    window.onload = function(){
+            var button=document.getElementsByTagName('input');
+            for(var i =0;i<button.length;i++){
+                button[i].addEventListener("click",function(){
+                    var parent=this.parentElement.parentElement;parent.remove();
+                });
+            }
+        };
+</script>
+</head>
+<body>
+	<h1 align="center">Họ và tên : Nguyễn Thế Anh</h1>
+	<h2 align="center">Lớp BK-02</h2>
+	<h2 align="center">Form Đăng Ký</h2>
+	<form name="form" method="POST" action="">
+	    <table align="center">
+	    	<tr>
+	    		<td>Name:</td>
+	    		<td><input type="text" name="name" value="" id="user"></td>
+	    	</tr>
+		    <tr>
+		    	<td>Password:</td>
+	    		<td><input type="password" name="password" value="" id="pass"></td>
+		    </tr>
+		    <tr>
+		    	<td>Re-password:</td>
+	    		<td><input type="password" name="password1" value="" id="pass1"></td>
+		    </tr>
+		    <tr>
+		    	<td>Phone</td>
+		    	<td><input type="text" name="phone" value="" id="phone"></td>
+		    </tr>
+		    <tr>
+		    	<td>Email</td>
+		    	<td><input type="email" name="email" value="" id="email"></td>
+		    </tr>
+		    <tr>
+		    	<td>Address</td>
+		    	<td><input type="text" name="address" value="" id="address"></td>
+		    </tr>
+		    <tr>
+		    	<td><input type="submit" value="register" onclick="add_uer()"></td>
+		    </tr>
+	     </table>
+	</form>
+	<br/>
+	     <table border="1px" align="center">
+	        <tr>
+		        <td> Họ </td>
+		        <td> Số điện thoại</td>
+		        <td> Email</td>
+		        <td>Địa chỉ</td>
+	        </tr>
+	        <tr>
+		        <td ><div id="result1"></td>
+		        <td ><div id="result2"></td>
+		        <td ><div id="result4"></td>
+		        <td ><div id="result3"></td>
+		        <td><input type="button" onclick="Delete()" value="Xóa phan tử"></td>
+	        </tr>
+           </table>
+</body>
+</html>
