@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Button Javascripts</title>
+</head>
+<body>
+   <input type="text" name="" id="id_textbox" value=""/>
+   <input type="Button" name="" id="id_button" value="Hien thi">
+   <script type="text/javascript">
+   	   var Button=document.getElementById('id_button');
+   	   Button.addEventListener('click',function(){
+              var value=document.getElementById('id_textbox').value;
+              alert(value);
+   	   });
+   	   window.prompt("Hello,What your name","");
+   	   var A = "12" + 7.5;
+   	   document.write(A);	
+   	   var x = 10;
+   	   var y = 5;
+   	   alert("The value of x is" + x + "The value of y is " + y);
+   	   alert("x AND y =" + (x && y));
+   	   alert("x OR y =" + (x || y));
+   	   alert("NOT x =" + (!x));
+   </script>
+</body>
+</html>

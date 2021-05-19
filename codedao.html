@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Code Vui</title>
+<style type="text/css">
+	#img{
+		position: relative;
+		margin-top: 150px;
+		margin-left: 150px;
+		width: 150px;
+		cursor: pointer;   //Biến hình chuột thành hình tay
+		transition: all 1s;
+	}
+	#status{
+		font-size: 50px;
+		color: blue;
+	}
+</style>
+</head>
+<body>
+<div>
+	<img src="D:\img wed/javacrip.jfif" id="img">
+	<span id="status">Hoc javascrip</span>
+</div>
+<script type="text/javascript">
+	const img = document.querySelector('#img');
+	const status = document.querySelector('#status');
+
+	img.onclick = () => {
+		img.style.top = '-50px';
+		setTimeout(() => {
+			img.style.top='-10px';
+		}, 1000);
+	}
+
+
+
+	img.onmouseover = () => {
+		img.style.width = '200px';
+		status.innerText = 'Cham vao Icon';
+	}
+
+
+
+	img.onmouseleave = () => {
+		img.style.width = '160px';
+		status.innerText = 'Bo ra Icon';
+	}
+</script>
+</body>
+</html>
