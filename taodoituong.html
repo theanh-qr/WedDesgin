@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Contenct-Type" contenct="text/html"; charset="UTF-8"/>
+<title>Untitled Document</title>
+<link rel="stylesheet" href="">
+</head>
+<body>
+<script type="text/javascript">
+	function sv(ten,tuoi,diem){
+		this.ten=ten;
+		this.tuoi=tuoi;
+		this.diem=diem;
+		this.hienthi=hienthi;
+	}
+	//doi tuong la thuoc tinh cua doi tuong khac
+	function diem(toan, van, anh){
+		this.toan = toan;
+		this.van = van;
+		this.anh = anh;
+	}
+	//them phuong thuc hien thi
+	function hienthi(){
+		document.write("Ten:" + this.ten + "<br>");
+		document.write("Tuoi:" + this.tuoi + "<br>");
+		//document.write("Tong diem:" + this.diem + "<br>");
+		document.write("Diem toan:" + this.diem.toan + "<br>");
+		document.write("Diem van:" + this.diem.van + "<br>");
+		document.write("Diem anh:" + this.diem.anh + "<br>");
+	}
+	diem1 = new diem(7,8,6);
+	diem2 = new diem(8,9,8);
+	sv1 = new sv("A",18,diem1);
+	sv2 = new sv("B",9,diem2);
+	sv1.hienthi();
+	sv2.hienthi();
+</script>
+</body>
+</html>

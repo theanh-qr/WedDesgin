@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Contenct-Type" contenct="text/html"; charset="UTF-8"/>
+<title>Untitled Document</title>
+<link rel="stylesheet" href="">
+</head>
+<body>
+	<P>Thong tin sinh vien:</P>
+<script type="text/javascript">
+	function sv(ten,tuoi,diem){
+		this.ten=prompt("Nhap ten sinh vien:");
+		this.tuoi=prompt("Nhap tuoi sinh vien:");
+		this.toan=prompt("Nhap dien toan sinh vien:");
+		this.van=prompt("Nhap dien van sinh vien:");
+		this.anh=prompt("Nhap dien anh sinh vien:");
+		this.trungbinh=(Number(this.toan)+Number(this.van)+Number(this.anh))/3
+		this.hienthi=hienthi;
+	}
+	//them phuong thuc hien thi
+	function hienthi(){
+		document.write("Ten:" + this.ten + "<br>");
+		document.write("Tuoi:" + this.tuoi + "<br>");
+		//document.write("Tong diem:" + this.diem + "<br>");
+		document.write("Diem toan:" + this.toan + "<br>");
+		document.write("Diem van:" + this.van + "<br>");
+		document.write("Diem anh:" + this.anh + "<br>");
+		document.write("Trungbinh:" + this.trungbinh + "<br>");
+	}
+	sv1 = new sv();
+	sv1.hienthi();
+</script>
+</body>
+</html>
